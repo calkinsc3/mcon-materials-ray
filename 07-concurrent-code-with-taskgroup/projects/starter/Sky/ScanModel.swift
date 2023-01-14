@@ -75,10 +75,12 @@ final class ScanModel: ObservableObject {
   }
   
   func worker(number: Int) async -> Result<String, Error> {
+    
     await onScheduled()
     
     let task = ScanTask(input: number)
     let result: String
+    
     do {
       result = try await task.run()
     } catch {

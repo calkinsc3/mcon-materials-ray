@@ -6,9 +6,8 @@ import Combine
 
 @main
 struct SkyApp: App {
-  @ObservedObject
-  var scanModel = ScanModel(total: 20, localName: UIDevice.current.name)
   
+  @ObservedObject var scanModel = ScanModel(total: 20, localName: UIDevice.current.name)
   @State var isScanning = false
   
   /// The last error message that happened.
